@@ -1,0 +1,49 @@
+PODS:
+  - FontAwesome.swift (1.5.1)
+  - IoniconsSwift (2.1.4)
+  - JJFloatingActionButton (1.2.0)
+  - NVActivityIndicatorView/AppExtension (4.7.0)
+  - ReachabilitySwift (4.3.1)
+  - RevealingSplashView (0.6.0)
+  - SwiftyJSON (4.2.0)
+
+DEPENDENCIES:
+  - FontAwesome.swift
+  - IoniconsSwift (from `http://github.com/tidwall/IoniconsSwift.git`, branch `master`)
+  - JJFloatingActionButton
+  - NVActivityIndicatorView/AppExtension
+  - ReachabilitySwift
+  - RevealingSplashView
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FontAwesome.swift
+    - JJFloatingActionButton
+    - NVActivityIndicatorView
+    - ReachabilitySwift
+    - RevealingSplashView
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  IoniconsSwift:
+    :branch: master
+    :git: http://github.com/tidwall/IoniconsSwift.git
+
+CHECKOUT OPTIONS:
+  IoniconsSwift:
+    :commit: 6189f2c363b7694b89a1efea7bf29f967cb8b464
+    :git: http://github.com/tidwall/IoniconsSwift.git
+
+SPEC CHECKSUMS:
+  FontAwesome.swift: 9b5a9b9adb6d48b2d37c1e789889ef377cfbc205
+  IoniconsSwift: a9034803dfe59ec48a73c95b812c67afdfa3ed08
+  JJFloatingActionButton: 8d3fc4b4c389c6984583cc371fd89deb819fa521
+  NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
+  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
+  RevealingSplashView: 40c5a770894459736acdc95655eeba0dd30ce91c
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+
+PODFILE CHECKSUM: 623e58a66d47a58e69266f464fcc24df80c61846
+
+COCOAPODS: 1.6.1

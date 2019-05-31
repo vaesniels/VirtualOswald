@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Slide" customModule="Virtual_Oswald" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphoneMockup" translatesAutoresizingMaskIntoConstraints="NO" id="ZXv-QZ-fFg">
+                    <rect key="frame" x="97" y="82" width="126" height="274"/>
+                    <constraints>
+                        <constraint firstAttribute="height" secondItem="ZXv-QZ-fFg" secondAttribute="width" multiplier="124:57" id="V3t-lW-S8A"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tutorial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLt-0R-jZ6">
+                    <rect key="frame" x="48" y="30" width="224" height="42"/>
+                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="30"/>
+                    <color key="textColor" red="0.96078431369999995" green="0.56862745100000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="45"/>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6K-R6-uFy">
+                    <rect key="frame" x="32" y="366" width="256" height="20"/>
+                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="28"/>
+                    </variation>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGk-6c-oBK">
+                    <rect key="frame" x="20" y="34.5" width="42" height="33"/>
+                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                    <state key="normal" title="Menu">
+                        <color key="titleColor" red="0.96078431369999995" green="0.56862745100000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="30"/>
+                    </variation>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esw-AE-mu6">
+                    <rect key="frame" x="270" y="34.5" width="30" height="33"/>
+                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                    <state key="normal" title="Skip">
+                        <color key="titleColor" red="0.96078431369999995" green="0.56862745100000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="30"/>
+                    </variation>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="PGk-6c-oBK" firstAttribute="centerY" secondItem="gLt-0R-jZ6" secondAttribute="centerY" id="0NW-yI-vwK"/>
+                <constraint firstItem="P6K-R6-uFy" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.8" id="6ws-Fe-ZbJ"/>
+                <constraint firstItem="PGk-6c-oBK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="F2H-Tg-Y3p"/>
+                <constraint firstItem="gLt-0R-jZ6" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Gn4-Io-luY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="centerX" secondItem="ZXv-QZ-fFg" secondAttribute="centerX" id="IWL-9f-GSB"/>
+                <constraint firstItem="P6K-R6-uFy" firstAttribute="top" secondItem="ZXv-QZ-fFg" secondAttribute="bottom" constant="10" id="Qh5-Nm-BIz"/>
+                <constraint firstItem="esw-AE-mu6" firstAttribute="centerY" secondItem="gLt-0R-jZ6" secondAttribute="centerY" id="ZTk-Xv-YfQ"/>
+                <constraint firstItem="esw-AE-mu6" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-20" id="dsV-OS-LgB"/>
+                <constraint firstItem="ZXv-QZ-fFg" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" multiplier="0.5" id="i2e-EW-5a3"/>
+                <constraint firstItem="ZXv-QZ-fFg" firstAttribute="top" secondItem="gLt-0R-jZ6" secondAttribute="bottom" constant="10" id="olA-ET-TcT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="centerX" secondItem="P6K-R6-uFy" secondAttribute="centerX" id="uue-MA-8q3"/>
+                <constraint firstItem="gLt-0R-jZ6" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.7" id="wIQ-rN-2Ul"/>
+                <constraint firstItem="gLt-0R-jZ6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="wbC-g6-Yyi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="image" destination="ZXv-QZ-fFg" id="q0T-u0-uP7"/>
+                <outlet property="info" destination="P6K-R6-uFy" id="cap-YY-ir5"/>
+                <outlet property="menuButton" destination="PGk-6c-oBK" id="ZwP-q6-X3C"/>
+                <outlet property="skipButton" destination="esw-AE-mu6" id="kSg-c8-57g"/>
+                <outlet property="title" destination="gLt-0R-jZ6" id="0cu-tk-5Wq"/>
+            </connections>
+            <point key="canvasLocation" x="39.200000000000003" y="37.684729064039409"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="iphoneMockup" width="372.5" height="752.5"/>
+    </resources>
+</document>

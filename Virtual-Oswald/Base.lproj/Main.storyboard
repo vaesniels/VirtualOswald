@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jo1-Gg-iap">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="GQb-nN-8iF">
+            <objects>
+                <viewController storyboardIdentifier="gameViewController" id="oQd-WN-t0l" customClass="GameViewController" customModule="Virtual_Oswald" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LAD-OB-zdQ" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="shX-OB-QJh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDX-82-Ldv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="807"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="8iw-u8-7uE">
+            <objects>
+                <viewController storyboardIdentifier="mainView" id="iJO-ty-dL3" customClass="MainViewController" customModule="Virtual_Oswald" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UJE-cR-1zV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0BN-I9-LeY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </arscnView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3HQ-Pn-3pF" customClass="ChatView" customModule="Virtual_Oswald" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="763.33333333333337" width="375" height="48.666666666666629"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oso-ue-C9s">
+                                <rect key="frame" x="28" y="44" width="319" height="100"/>
+                                <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NTH-Dk-r3n" customClass="TopView" customModule="Virtual_Oswald" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-110" width="319" height="100"/>
+                                        <color key="backgroundColor" red="0.030925624190000001" green="0.84743813450000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="8S8-1K-sk7"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MiU-6i-i0V" customClass="TopImageView" customModule="Virtual_Oswald" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="J72-JA-5Ha"/>
+                                        </constraints>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIm-vu-63i" customClass="QuickReplyView" customModule="Virtual_Oswald" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="300" width="319" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="XdH-6W-g0s"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="NTH-Dk-r3n" firstAttribute="width" secondItem="oso-ue-C9s" secondAttribute="width" id="8Od-3T-HbA"/>
+                                    <constraint firstItem="dIm-vu-63i" firstAttribute="width" secondItem="oso-ue-C9s" secondAttribute="width" id="JkI-yb-9jc"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="V6q-iE-LUw"/>
+                                    <constraint firstItem="dIm-vu-63i" firstAttribute="centerX" secondItem="oso-ue-C9s" secondAttribute="centerX" id="fsy-WS-JtV"/>
+                                    <constraint firstItem="MiU-6i-i0V" firstAttribute="top" secondItem="NTH-Dk-r3n" secondAttribute="bottom" constant="10" id="iFc-lM-fgN"/>
+                                    <constraint firstItem="dIm-vu-63i" firstAttribute="top" secondItem="MiU-6i-i0V" secondAttribute="bottom" id="kUQ-TY-Rc2"/>
+                                    <constraint firstItem="MiU-6i-i0V" firstAttribute="width" secondItem="oso-ue-C9s" secondAttribute="width" id="mOD-ng-r1J"/>
+                                    <constraint firstItem="MiU-6i-i0V" firstAttribute="centerX" secondItem="oso-ue-C9s" secondAttribute="centerX" id="uzh-zt-Pnr"/>
+                                </constraints>
+                            </stackView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9C0-5A-bDf" customClass="BottomView" customModule="Virtual_Oswald" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="649.66666666666663" width="375" height="162.33333333333337"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBt-VM-5Or" customClass="NoWifiView" customModule="Virtual_Oswald" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djn-BB-dgE" customClass="TutorialView" customModule="Virtual_Oswald" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="djn-BB-dgE" firstAttribute="centerX" secondItem="UJE-cR-1zV" secondAttribute="centerX" id="0En-XM-qJ5"/>
+                            <constraint firstItem="oso-ue-C9s" firstAttribute="centerX" secondItem="1ty-qs-g3r" secondAttribute="centerX" id="0cb-WD-aK8"/>
+                            <constraint firstItem="3HQ-Pn-3pF" firstAttribute="centerX" secondItem="UJE-cR-1zV" secondAttribute="centerX" id="3CO-ye-fOG"/>
+                            <constraint firstItem="dBt-VM-5Or" firstAttribute="centerY" secondItem="UJE-cR-1zV" secondAttribute="centerY" id="9pO-6x-mPf"/>
+                            <constraint firstItem="3HQ-Pn-3pF" firstAttribute="bottom" secondItem="UJE-cR-1zV" secondAttribute="bottom" id="H3X-fd-sjT"/>
+                            <constraint firstItem="dBt-VM-5Or" firstAttribute="width" secondItem="UJE-cR-1zV" secondAttribute="width" id="IR8-A8-bNw"/>
+                            <constraint firstItem="9C0-5A-bDf" firstAttribute="width" secondItem="UJE-cR-1zV" secondAttribute="width" id="KIA-Eq-h7N"/>
+                            <constraint firstItem="3HQ-Pn-3pF" firstAttribute="height" secondItem="UJE-cR-1zV" secondAttribute="height" multiplier="0.06" id="bNI-GJ-C21"/>
+                            <constraint firstItem="9C0-5A-bDf" firstAttribute="height" secondItem="UJE-cR-1zV" secondAttribute="height" multiplier="0.2" id="cXi-Ar-HxY"/>
+                            <constraint firstItem="djn-BB-dgE" firstAttribute="height" secondItem="UJE-cR-1zV" secondAttribute="height" id="dsR-sb-ytF"/>
+                            <constraint firstItem="djn-BB-dgE" firstAttribute="width" secondItem="UJE-cR-1zV" secondAttribute="width" id="fMb-8v-TfQ"/>
+                            <constraint firstItem="9C0-5A-bDf" firstAttribute="centerX" secondItem="UJE-cR-1zV" secondAttribute="centerX" id="jSR-kL-OlF"/>
+                            <constraint firstItem="dBt-VM-5Or" firstAttribute="height" secondItem="UJE-cR-1zV" secondAttribute="height" id="jvh-g1-AR0"/>
+                            <constraint firstItem="oso-ue-C9s" firstAttribute="width" secondItem="UJE-cR-1zV" secondAttribute="width" multiplier="0.85" id="pGZ-cn-d9b"/>
+                            <constraint firstItem="9C0-5A-bDf" firstAttribute="bottom" secondItem="UJE-cR-1zV" secondAttribute="bottom" id="rZW-V6-xOt"/>
+                            <constraint firstItem="dBt-VM-5Or" firstAttribute="centerX" secondItem="UJE-cR-1zV" secondAttribute="centerX" id="sdA-nK-VVY"/>
+                            <constraint firstItem="3HQ-Pn-3pF" firstAttribute="width" secondItem="UJE-cR-1zV" secondAttribute="width" id="u0I-DZ-JWi"/>
+                            <constraint firstItem="djn-BB-dgE" firstAttribute="centerY" secondItem="UJE-cR-1zV" secondAttribute="centerY" id="uMj-DQ-3cv"/>
+                            <constraint firstItem="oso-ue-C9s" firstAttribute="top" secondItem="1ty-qs-g3r" secondAttribute="top" id="v60-Gx-nKu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1ty-qs-g3r"/>
+                    </view>
+                    <connections>
+                        <outlet property="BViewHeightNormal" destination="cXi-Ar-HxY" id="Nrv-HQ-Ewd"/>
+                        <outlet property="bottomView" destination="9C0-5A-bDf" id="kWp-lw-d3o"/>
+                        <outlet property="chatView" destination="3HQ-Pn-3pF" id="mFc-6n-SbW"/>
+                        <outlet property="chatViewBottomConstraint" destination="H3X-fd-sjT" id="RGw-s5-13a"/>
+                        <outlet property="noWifiView" destination="dBt-VM-5Or" id="CaS-IE-T4u"/>
+                        <outlet property="quickReplyView" destination="dIm-vu-63i" id="88n-Jq-lYj"/>
+                        <outlet property="sceneView" destination="0BN-I9-LeY" id="wlp-S3-JOE"/>
+                        <outlet property="topImageView" destination="MiU-6i-i0V" id="k7c-7E-uI1"/>
+                        <outlet property="topView" destination="NTH-Dk-r3n" id="UEM-E3-F28"/>
+                        <outlet property="tutorialView" destination="djn-BB-dgE" id="0mH-ZJ-9ty"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vPG-DM-tpd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-956" y="806.89655172413802"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="Jdf-yk-Wxr">
+            <objects>
+                <viewController storyboardIdentifier="Tutorial" id="MGb-so-d7a" customClass="TutorialViewController" customModule="Virtual_Oswald" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i3m-0h-nSc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kxq-D6-UnL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="9gh-Ch-gQw">
+                                <rect key="frame" x="168" y="741" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="0.96078431369999995" green="0.56862745100000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4H0-Ac-8aq" firstAttribute="bottom" secondItem="9gh-Ch-gQw" secondAttribute="bottom" id="N44-2U-Q52"/>
+                            <constraint firstItem="9gh-Ch-gQw" firstAttribute="centerX" secondItem="4H0-Ac-8aq" secondAttribute="centerX" id="mJw-ki-yNb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4H0-Ac-8aq"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="9gh-Ch-gQw" id="Pnt-pD-WBe"/>
+                        <outlet property="scrollView" destination="kxq-D6-UnL" id="0hF-eJ-4c2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lIh-gg-i0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="-10"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="R15-8n-X4h">
+            <objects>
+                <viewController id="Jo1-Gg-iap" customClass="WelcomeViewController" customModule="Virtual_Oswald" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0nS-K4-aJS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" restorationIdentifier="fgb" translatesAutoresizingMaskIntoConstraints="NO" id="7Qc-an-thH">
+                                <rect key="frame" x="0.0" y="44" width="375" height="367"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oswaldSafari" translatesAutoresizingMaskIntoConstraints="NO" id="FdL-YT-tfs">
+                                        <rect key="frame" x="40.666666666666657" y="0.0" width="293.66666666666674" height="367"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="FdL-YT-tfs" secondAttribute="height" multiplier="4:5" id="OYN-BY-uLc"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="FdL-YT-tfs" firstAttribute="centerX" secondItem="7Qc-an-thH" secondAttribute="centerX" id="Tea-br-Vsp"/>
+                                    <constraint firstItem="FdL-YT-tfs" firstAttribute="height" secondItem="7Qc-an-thH" secondAttribute="height" id="hRn-6W-a4T"/>
+                                    <constraint firstItem="FdL-YT-tfs" firstAttribute="centerY" secondItem="7Qc-an-thH" secondAttribute="centerY" id="tcJ-xV-c8U"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cc-9J-ZDc">
+                                <rect key="frame" x="0.0" y="411" width="375" height="183.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welkom bij Virtual Zoo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIU-ML-if6">
+                                        <rect key="frame" x="47" y="61.333333333333321" width="281" height="25.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="40"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ga meteen aan de slag of volg de tutorial" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKN-ax-ik6">
+                                        <rect key="frame" x="47" y="96.666666666666686" width="281" height="42"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                                        <color key="textColor" red="0.5450980392" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="32"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="TIU-ML-if6" firstAttribute="centerX" secondItem="3cc-9J-ZDc" secondAttribute="centerX" id="0fS-4d-nWy"/>
+                                    <constraint firstItem="TIU-ML-if6" firstAttribute="width" secondItem="3cc-9J-ZDc" secondAttribute="width" multiplier="0.75" id="Cd1-tq-ckf"/>
+                                    <constraint firstItem="TIU-ML-if6" firstAttribute="bottom" secondItem="3cc-9J-ZDc" secondAttribute="centerY" constant="-5" id="EuL-S4-PEE"/>
+                                    <constraint firstItem="uKN-ax-ik6" firstAttribute="centerX" secondItem="3cc-9J-ZDc" secondAttribute="centerX" id="Fg4-fe-djU"/>
+                                    <constraint firstItem="uKN-ax-ik6" firstAttribute="top" secondItem="3cc-9J-ZDc" secondAttribute="centerY" constant="5" id="Xrn-5W-T49"/>
+                                    <constraint firstItem="uKN-ax-ik6" firstAttribute="width" secondItem="3cc-9J-ZDc" secondAttribute="width" multiplier="0.75" id="dM1-2k-Cfg"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VbG-Ra-p4t">
+                                <rect key="frame" x="0.0" y="594.66666666666663" width="375" height="183.33333333333337"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWu-yQ-DyP">
+                                        <rect key="frame" x="47" y="40.666666666666742" width="281" height="46"/>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.56862745100000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="24"/>
+                                        <color key="tintColor" red="0.96078431369999995" green="0.56862745100000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="1" height="6"/>
+                                        <state key="normal" title="Volg de tutorial!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.96078431369999995" green="0.56862745100000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="40"/>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="MGb-so-d7a" kind="show" id="uya-iI-BKB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5t-zw-1Lr">
+                                        <rect key="frame" x="47" y="96.666666666666742" width="281" height="33"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                                        <state key="normal" title="Ga meteen aan de slag!">
+                                            <color key="titleColor" red="0.96078431369999995" green="0.56862745100000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="34"/>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="iJO-ty-dL3" kind="show" id="nKX-un-0Ys"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RWu-yQ-DyP" firstAttribute="bottom" secondItem="VbG-Ra-p4t" secondAttribute="centerY" constant="-5" id="6ea-qm-8ae"/>
+                                    <constraint firstItem="W5t-zw-1Lr" firstAttribute="width" secondItem="VbG-Ra-p4t" secondAttribute="width" multiplier="0.75" id="Cs0-gk-ZeX"/>
+                                    <constraint firstItem="W5t-zw-1Lr" firstAttribute="top" secondItem="VbG-Ra-p4t" secondAttribute="centerY" constant="5" id="Qza-IX-Gba"/>
+                                    <constraint firstItem="RWu-yQ-DyP" firstAttribute="centerX" secondItem="VbG-Ra-p4t" secondAttribute="centerX" id="XHN-Pg-Sqk"/>
+                                    <constraint firstItem="RWu-yQ-DyP" firstAttribute="width" secondItem="VbG-Ra-p4t" secondAttribute="width" multiplier="0.75" id="hoh-6h-akE"/>
+                                    <constraint firstItem="W5t-zw-1Lr" firstAttribute="centerX" secondItem="VbG-Ra-p4t" secondAttribute="centerX" id="scc-m4-Bxr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3cc-9J-ZDc" firstAttribute="width" secondItem="0Wz-XW-ZT1" secondAttribute="width" id="FHg-Bw-Ljd"/>
+                            <constraint firstItem="3cc-9J-ZDc" firstAttribute="height" secondItem="0Wz-XW-ZT1" secondAttribute="height" multiplier="0.25" id="I2l-wJ-4cV"/>
+                            <constraint firstItem="7Qc-an-thH" firstAttribute="width" secondItem="0Wz-XW-ZT1" secondAttribute="width" id="IBS-S5-oTv"/>
+                            <constraint firstItem="VbG-Ra-p4t" firstAttribute="centerX" secondItem="0Wz-XW-ZT1" secondAttribute="centerX" id="LPm-bg-xaR"/>
+                            <constraint firstItem="VbG-Ra-p4t" firstAttribute="width" secondItem="0Wz-XW-ZT1" secondAttribute="width" id="Lgv-wn-o8J"/>
+                            <constraint firstItem="3cc-9J-ZDc" firstAttribute="centerX" secondItem="0Wz-XW-ZT1" secondAttribute="centerX" id="VBa-iL-EL5"/>
+                            <constraint firstItem="VbG-Ra-p4t" firstAttribute="height" secondItem="0Wz-XW-ZT1" secondAttribute="height" multiplier="0.25" id="W0q-nq-62m"/>
+                            <constraint firstItem="7Qc-an-thH" firstAttribute="centerX" secondItem="0Wz-XW-ZT1" secondAttribute="centerX" id="XiI-ax-jY8"/>
+                            <constraint firstItem="7Qc-an-thH" firstAttribute="top" secondItem="0Wz-XW-ZT1" secondAttribute="top" id="Zf7-RL-T9a"/>
+                            <constraint firstItem="7Qc-an-thH" firstAttribute="height" secondItem="0Wz-XW-ZT1" secondAttribute="height" multiplier="0.5" id="feI-zd-lbn"/>
+                            <constraint firstItem="VbG-Ra-p4t" firstAttribute="top" secondItem="3cc-9J-ZDc" secondAttribute="bottom" id="nIo-IA-ovi"/>
+                            <constraint firstItem="3cc-9J-ZDc" firstAttribute="top" secondItem="7Qc-an-thH" secondAttribute="bottom" id="ybS-Tt-Klk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Wz-XW-ZT1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eWq-cK-bA2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-956" y="-9.6059113300492616"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="oswaldSafari" width="3842" height="4812.5"/>
+    </resources>
+</document>

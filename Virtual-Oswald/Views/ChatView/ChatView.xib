@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatView" customModule="Virtual_Oswald" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="uI5-m1-q2C"/>
+                <outlet property="textField" destination="1ZS-bR-pu2" id="mji-Ek-SAe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZn-Zz-Ysa">
+                    <rect key="frame" x="293.5" y="10" width="75" height="30"/>
+                    <state key="normal" title="Verstuur">
+                        <color key="titleColor" red="0.96078431369999995" green="0.56862745100000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onSendPress:" destination="-1" eventType="touchUpInside" id="NaV-qU-opE"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Stel je vraag" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1ZS-bR-pu2">
+                    <rect key="frame" x="10" y="10" width="281.5" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="50"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="AZn-Zz-Ysa" firstAttribute="leading" secondItem="1ZS-bR-pu2" secondAttribute="trailing" constant="2" id="4pD-Qd-NA1"/>
+                <constraint firstItem="1ZS-bR-pu2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Iea-GB-9em"/>
+                <constraint firstItem="AZn-Zz-Ysa" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.2" id="PWw-6I-3WO"/>
+                <constraint firstItem="AZn-Zz-Ysa" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="SCZ-bC-np8"/>
+                <constraint firstItem="1ZS-bR-pu2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="q7c-pM-J1s"/>
+                <constraint firstItem="1ZS-bR-pu2" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.75" id="uMK-U7-tb0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="39.200000000000003" y="46.776611694152926"/>
+        </view>
+    </objects>
+</document>
